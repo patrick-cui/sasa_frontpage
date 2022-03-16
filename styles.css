@@ -1,7 +1,7 @@
 * {box-sizing:border-box}
 
 
-.slideshow-container {
+.carousel__track {
   max-width: 1600pxpx;
   position: relative;
   margin: auto;
@@ -15,13 +15,13 @@
   cursor: pointer;
   position: absolute;
   top: 20%;
-  width: 13px;
-  height: 13px;
+  width: 5px;
+  height: 5px;
   margin-top: -23px;
-  padding: 30px;
+  padding: 25px;
   color: grey;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 25px;
   transition: 0.4s ease;
   border-radius: 30px;
   user-select: none;
@@ -33,9 +33,6 @@
   border-radius: 30px;
 }
 
-.Back:hover, .forward:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 .dots {
   cursor: pointer;

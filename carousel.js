@@ -21,8 +21,23 @@ function SlideShow(n) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < circles.length; i++) {
-      circles[i].className = circles[i].className.replace(" enable", "");
+      dots[i].className = dots[i].className.replace(" enable", "");
   }
   slides[slidePosition-1].style.display = "block";
-  circles[slidePosition-1].className += " enable";
+  dots[slidePosition-1].className += " enable";
+} 
+
+var slidePosition = 0;
+SlideShow();
+
+function SlideShow() {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slidePosition++;
+  if (slidePosition > slides.length) {slidePosition = 1}
+  slides[slidePosition-1].style.display = "block";
+  setTimeout(SlideShow, 3000);
 } 
